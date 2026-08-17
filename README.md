@@ -1,62 +1,77 @@
-🛡️ Scam Message Detector
+# 🛡️ Scam Message Detector
 
-Machine Learning powered scam and phishing message detection
+**Machine Learning powered scam and phishing message detection**
 
-Detect whether a message is likely to be SAFE or SCAM using Natural Language Processing and Machine Learning.
+Detect whether a message is likely to be **SAFE** or **SCAM** using Natural Language Processing and Machine Learning.
 
-Built with Python • Scikit-Learn • TF-IDF • Streamlit
+**Built with:** Python • Scikit-Learn • TF-IDF • Streamlit
 
-🚀 Overview
+---
 
-Scam Message Detector is an NLP-based Machine Learning classification project that analyzes text messages and predicts whether they contain patterns commonly associated with scams.
+## 🚀 Overview
 
-The project implements a complete ML pipeline:
+**Scam Message Detector** is an NLP-based Machine Learning classification project that analyzes text messages and predicts whether they contain patterns commonly associated with scams.
 
-Dataset → Text Preprocessing → TF-IDF → Model Training → Evaluation → Prediction → Streamlit Dashboard
+The project follows a complete ML workflow:
 
-✨ Features
-📨 Scam/Safe message classification
-🧠 TF-IDF text feature extraction
-🤖 Multiple ML classification algorithms
-📊 Model performance evaluation
-🎯 Prediction confidence score
-🖥️ Interactive Streamlit dashboard
-🚨 Scam warning and safety guidance
-💾 Saved trained model and TF-IDF vectorizer
-🌙 Dark-themed dashboard UI
-🧠 Machine Learning Models
+**Dataset → Text Preprocessing → TF-IDF → Model Training → Evaluation → Prediction → Streamlit Dashboard**
 
-The project evaluates three classification algorithms:
+> **Important:** The current dataset is synthetic. The reported 100% test accuracy is a demonstration result and should not be interpreted as real-world scam-detection performance.
 
-Model	Accuracy
-Logistic Regression	100%
-Naive Bayes	100%
-Random Forest	100%
-🏆 Selected Model
+---
 
-Logistic Regression
+## ✨ Features
 
-The Logistic Regression model was selected as the final model used by the application.
+- 📨 Scam/Safe message classification
+- 🧠 TF-IDF text feature extraction
+- 🤖 Multiple Machine Learning classification algorithms
+- 📊 Model performance evaluation
+- 🎯 Prediction confidence score
+- 🖥️ Interactive Streamlit dashboard
+- 🚨 Scam warning and safety guidance
+- 💾 Saved trained model and TF-IDF vectorizer
+- 🌙 Dark-themed dashboard UI
 
-Note: The current dataset is synthetic and contains 1,000 records. The 100% test accuracy should therefore not be interpreted as real-world scam-detection performance.
+---
 
-📊 Dataset
+## 🧠 Machine Learning Models
 
-The dataset contains 1,000 messages with two columns:
+| Model | Accuracy |
+|---|---:|
+| **Logistic Regression** | **100%** |
+| Naive Bayes | **100%** |
+| Random Forest | **100%** |
 
-Feature	Description
-message	Text message to classify
-label	0 = SAFE, 1 = SCAM
+### 🏆 Selected Model
 
-Dataset distribution:
+**Logistic Regression** is used as the deployed prediction model.
 
-500 SAFE messages
-500 SCAM messages
+The models were evaluated using Accuracy, Precision, Recall, and F1-score.
 
-The dataset is stored in:
+---
 
+## 📊 Dataset
+
+The dataset contains **1,000 messages** with two columns:
+
+| Feature | Description |
+|---|---|
+| `message` | Text message to classify |
+| `label` | `0` = SAFE, `1` = SCAM |
+
+**Distribution:** 500 SAFE messages and 500 SCAM messages.
+
+Dataset location:
+
+```text
 data/messages.csv
-🔬 Machine Learning Pipeline
+```
+
+---
+
+## 🔬 Machine Learning Workflow
+
+```text
 ┌──────────────────────┐
 │    Message Dataset   │
 └──────────┬───────────┘
@@ -72,59 +87,76 @@ data/messages.csv
 └──────────┬───────────┘
            │
            ▼
+┌────────────────────────────┐
+│      Train ML Models       │
+│                            │
+│  • Logistic Regression     │
+│  • Naive Bayes             │
+│  • Random Forest           │
+└─────────────┬──────────────┘
+              │
+              ▼
 ┌──────────────────────┐
-│   Train ML Models    │
-├──────────────────────┤
-│ Logistic Regression  │
-│ Naive Bayes          │
-│ Random Forest        │
+│   Model Evaluation   │
 └──────────┬───────────┘
            │
            ▼
 ┌──────────────────────┐
-│  Model Evaluation    │
-└──────────┬───────────┘
-           │
-           ▼
-┌──────────────────────┐
-│ Logistic Regression  │
-│    Selected Model    │
+│  Logistic Regression │
+│   Selected Model     │
 └──────────┬───────────┘
            │
            ▼
 ┌──────────────────────┐
 │ Streamlit Dashboard  │
 └──────────────────────┘
-🖥️ Dashboard
+```
 
-The Streamlit application allows users to enter a message and receive:
+---
 
-🚨 Scam/Safe prediction
-📈 Prediction confidence
-🤖 Model information
-⚠️ Security guidance
-📊 Analysis summary
-Dashboard Screenshot
+## 🖥️ Dashboard
 
-Add your screenshot here:
+The Streamlit application provides:
 
+- 🚨 Scam/Safe prediction
+- 📈 Prediction confidence
+- 🤖 Model information
+- ⚠️ Security guidance
+- 📊 Analysis summary
+
+### Dashboard Screenshot
+
+Add your screenshot as:
+
+```text
 screenshots/dashboard.png
+```
 
-Then use:
+Then it will appear here:
 
 <p align="center">
-  <img src="screenshots/dashboard.png" width="900">
+  <img src="screenshots/dashboard.png" width="900" alt="Scam Message Detector Dashboard">
 </p>
-🛠️ Tech Stack
-Category	Technologies
-Language	Python
-Data Processing	Pandas, NumPy
-NLP	TF-IDF
-Machine Learning	Scikit-Learn
-Models	Logistic Regression, Naive Bayes, Random Forest
-Model Persistence	Joblib
-UI	Streamlit
-📁 Project Structure
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Data Processing | Pandas, NumPy |
+| NLP | TF-IDF |
+| Machine Learning | Scikit-Learn |
+| Models | Logistic Regression, Naive Bayes, Random Forest |
+| Model Persistence | Joblib |
+| Application | Streamlit |
+
+---
+
+## 📁 Project Structure
+
+```text
 SCAM-MESSAGE-DETECTOR/
 │
 ├── app/
@@ -148,120 +180,143 @@ SCAM-MESSAGE-DETECTOR/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-⚙️ Installation
-1. Clone the repository
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/Afrid-40/Scam-Message-Detector.git
 cd Scam-Message-Detector
-2. Create a virtual environment
+```
+
+### 2. Create a virtual environment
+
+```bash
 python -m venv venv
-3. Activate the environment
+```
 
-Windows:
+### 3. Activate the environment
 
+**Windows:**
+
+```powershell
 venv\Scripts\activate
+```
 
-macOS/Linux:
+**macOS/Linux:**
 
+```bash
 source venv/bin/activate
-4. Install dependencies
+```
+
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
-🧪 Train the Model
+```
 
-To retrain the models:
+---
 
+## 🧪 Train the Model
+
+```bash
 python src/train.py
+```
 
-The trained model and TF-IDF vectorizer are saved in:
+The trained model and TF-IDF vectorizer are saved inside:
 
+```text
 models/
-🎯 Command-Line Prediction
+```
+
+---
+
+## 🎯 Command-Line Prediction
 
 Run:
 
+```bash
 python src/predict.py
+```
 
-Example:
+### Scam example
 
-==================================================
-       SCAM MESSAGE DETECTOR
-==================================================
-
-
-Enter a message to analyze:
+```text
 > Congratulations! You have won ₹50,000. Click this link to claim your prize.
 
-
-==================================================
 🚨 SCAM DETECTED
 Confidence: 92.79%
-==================================================
+```
 
-Safe message example:
+### Safe example
 
+```text
 > Hey, are we still meeting tomorrow?
 
-
-==================================================
 ✅ SAFE MESSAGE
 Confidence: 91.72%
-==================================================
-▶️ Run the Streamlit Dashboard
+```
 
-Start the application:
+---
 
+## ▶️ Run the Streamlit Dashboard
+
+```bash
 streamlit run app/app.py
+```
 
-The dashboard will normally be available at:
+Open:
 
+```text
 http://localhost:8501
-📈 Evaluation
+```
 
-The models were evaluated using:
+---
 
-Accuracy
-Precision
-Recall
-F1-score
+## 🔮 Future Improvements
 
-For the current synthetic dataset, all three tested models achieved:
+- 🌐 Deploy the dashboard online
+- 📚 Train on larger real-world SMS and phishing datasets
+- 🔗 Detect suspicious URLs
+- 🧠 Add explainable AI
+- 📊 Add prediction history and analytics
+- 🚨 Detect phishing-specific patterns
+- 🌍 Support multiple languages
+- 📱 Improve mobile responsiveness
+- 🔄 Continuously retrain with new scam patterns
 
-100% test accuracy
+---
 
-The project uses Logistic Regression as the deployed prediction model.
+## ⚠️ Disclaimer
 
-🔮 Future Improvements
-🌐 Deploy the dashboard online
-📚 Train on larger real-world SMS/phishing datasets
-🔗 Detect suspicious URLs
-🧠 Add explainable AI
-📊 Add prediction history and analytics
-🚨 Detect phishing-specific patterns
-🌍 Support multiple languages
-📱 Improve mobile experience
-🔄 Continuously retrain with new scam patterns
-⚠️ Disclaimer
+This project is intended for **educational and demonstration purposes**.
 
-This project is intended for educational and demonstration purposes.
+The current dataset is synthetic, and the model's predictions should **not** be treated as definitive proof that a message is safe or malicious.
 
-The current dataset is synthetic, and the model's predictions should not be treated as definitive proof that a message is safe or malicious.
+Always verify suspicious messages through official channels. Never share passwords, OTPs, banking information, or other sensitive information with unknown sources.
 
-Always verify suspicious messages through official channels and avoid sharing passwords, OTPs, banking information, or other sensitive information.
+---
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Mohammed Shahed Afrid Khan
+**Mohammed Shahed Afrid Khan**
 
 Machine Learning • Artificial Intelligence • Python • Data Science
 
-GitHub:
-https://github.com/Afrid-40
+GitHub: [Afrid-40](https://github.com/Afrid-40)
 
-⭐ Support
+---
+
+## ⭐ Support
 
 If you found this project useful or interesting, consider giving the repository a ⭐.
 
 <p align="center">
 
-Built with Python • Scikit-Learn • TF-IDF • Streamlit
+**Built with Python • Scikit-Learn • TF-IDF • Streamlit**
 
 </p>
