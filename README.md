@@ -135,7 +135,7 @@ screenshots/dashboard.png
 Then it will appear here:
 
 <p align="center">
-  <img src="screenshots/Dashboard.png" width="900" alt="Scam Message Detector Dashboard">
+  <img src="screenshots/dashboard.png" width="900" alt="Scam Message Detector Dashboard">
 </p>
 
 ---
